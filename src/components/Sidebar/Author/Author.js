@@ -14,6 +14,7 @@ type Props = {
 
 const Author = ({ author, isIndex }: Props) => (
   <div className={styles['author']}>
+    {/*
     <Link to="/">
       <img
         src={withPrefix(author.photo)}
@@ -23,10 +24,16 @@ const Author = ({ author, isIndex }: Props) => (
         alt={author.name}
       />
     </Link>
+    */}
 
     { isIndex ? (
       <h1 className={styles['author__title']}>
-        <Link className={styles['author__title-link']} to="/">{author.name}</Link>
+        <Link className={styles['author__title-link']} to="/"><strong>S</strong>arah
+        <strong>J</strong>Lee</Link>
+        {/*
+            Normally this is {author.name} from config
+            TODO: add a way to wrap the config text content like '!J!ohn!D!oe' to do said styling
+        */}
       </h1>
     ) : (
       <h2 className={styles['author__title']}>

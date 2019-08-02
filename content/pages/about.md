@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "I made you a website"
 template: "page"
 ---
 

@@ -3,21 +3,25 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  title: 'SJ',
+  subtitle: 'SarahJLee',
+  copyright: 'made with love and a sense of urgency',
   disqusShortname: '',
-  postsPerPage: 4,
+  postsPerPage: 3,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'About this',
+      path: '/pages/about'
+    },
+    {
+      label: 'Scavenger',
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: 'Something extra',
+      path: '/bonus'
     },
     {
       label: 'Contact me',
@@ -25,9 +29,9 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
-    photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    name: 'SarahJLee',
+    photo: '', // '/photo.jpg'
+    bio: 'I made you a website lol',
     contacts: {
       email: '#',
       telegram: '#',
