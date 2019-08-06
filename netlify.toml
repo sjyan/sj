@@ -8,5 +8,5 @@
   from = "/*"
   to = "/about"
 [[redirects]]
-  from = "/"
-  to = "/about"
+  from = "https://sarahjlee.studio"
+  to = "https://sarahjlee.studio/about"
