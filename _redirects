@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://sarahjlee.netlify.com/* https://sarahjlee.studio/:splat 301!
