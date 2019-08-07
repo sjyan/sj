@@ -8,5 +8,8 @@
   from = "/*"
   to = "/about"
 [[redirects]]
-  from = "https://sarahjlee.studio/"
-  to = "https://sarahjlee.studio/about"
+  from = "https://sarahjlee.netlify.com/*"
+  to = "https://sarahjlee.studio/:splat"
+  status = 301
+  force = true
+
