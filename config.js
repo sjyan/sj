@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://sarahjlee.netlify.com',
   pathPrefix: '/',
   title: 'SJ',
   subtitle: 'SarahJLee',
@@ -12,26 +12,14 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'About this',
-      path: '/pages/about'
-    },
-    {
-      label: 'Scavenger',
+      label: 'About',
       path: '/'
-    },
-    {
-      label: 'Something extra',
-      path: '/bonus'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
     }
-  ],
+      ],
   author: {
     name: 'SarahJLee',
     photo: '', // '/photo.jpg'
-    bio: 'I made you a website lol',
+    bio: '',
     contacts: {
       email: '#',
       telegram: '#',

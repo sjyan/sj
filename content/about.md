@@ -1,5 +1,5 @@
 ---
 title: "Sorry, no one's home..."
-template: "page"
+template: "home"
 ---
 Currently under maintenance. Come back soon!

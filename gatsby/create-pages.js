@@ -50,7 +50,15 @@ const createPages = async ({ graphql, actions }) => {
   const { edges } = result.data.allMarkdownRemark;
 
   _.each(edges, (edge) => {
-    if (_.get(edge, 'node.frontmatter.template') === 'page') {
+    
+    // Custom home page with frontmatter denoted as home
+    if (_.get(edge, 'node.frontmatter.template') === 'home') {
+      createPage({
+        path: '/',
+        component: path.resolve('./src/templates/page-template.js'),
+	context: { slug: edge.node.fields.slug }
+      });
+    } else if (_.get(edge, 'node.frontmatter.template') === 'page') {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/page-template.js'),
