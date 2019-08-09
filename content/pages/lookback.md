@@ -2,7 +2,9 @@
 title: "A Look Back"
 template: "page"
 ---
-While I'm not one for taking pictures of everything, I'm glad I curated enough content for something like this. Although I've only known you for 
+While I'm not one for taking pictures of everything, I'm glad I curated enough content for something like this. Although I've only known you for the better half of 2019, it feels like it's been...dare I say...a **lifetime**. Here's to the rest of 2019 and beyond.
+
+
 
 ![King](/sarah/king.jpg "King")
 *I guess this is where it all began*
