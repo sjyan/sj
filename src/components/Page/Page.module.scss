@@ -4,6 +4,11 @@
 .page {
   @include margin-bottom(2);
 
+  /* prevent markdown images from rotating */
+  img {
+    max-width: 600px;
+  }
+
   &__inner {
     padding: 25px 20px;
   }

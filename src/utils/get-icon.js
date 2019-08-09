@@ -8,6 +8,12 @@ const getIcon = (name: string) => {
     case 'twitter':
       icon = ICONS.TWITTER;
       break;
+    case 'instagram':
+      icon = ICONS.INSTAGRAM;
+      break;
+    case 'tumblr':
+      icon = ICONS.TUMBLR;
+      break;
     case 'github':
       icon = ICONS.GITHUB;
       break;

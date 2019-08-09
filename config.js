@@ -14,6 +14,18 @@ module.exports = {
     {
       label: 'About',
       path: '/'
+    },
+    {
+      label: 'Clues',
+      path: '/feed'
+    },
+    {
+      label: 'Sweet thangs',
+      path: '/sweet-thangs'
+    },
+    {
+      label: 'A look back',
+      path: '/pages/lookback'
     }
       ],
   author: {
@@ -21,12 +33,11 @@ module.exports = {
     photo: '', // '/photo.jpg'
     bio: '',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'sarahjlee8@gmail.com',
+      instagram: 'sjleezy',
+      tumblr: 'sarahjlee',
+      twitter: 'sarahnuna',
+      github: 'sarahjlee93'
     }
   }
 };

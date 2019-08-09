@@ -6,6 +6,12 @@ const getContactHref = (name: string, contact: string) => {
     case 'twitter':
       href = `https://www.twitter.com/${contact}`;
       break;
+    case 'instagram':
+      href = `https://www.instagram.com/${contact}`;
+      break;
+    case 'tumblr':
+      href = `https://${contact}.tumblr.com`;
+      break;
     case 'github':
       href = `https://github.com/${contact}`;
       break;
