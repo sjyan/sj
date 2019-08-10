@@ -27,6 +27,12 @@ const createPages = async ({ graphql, actions }) => {
     component: path.resolve('./src/templates/categories-list-template.js')
   });
 
+  // Instagram feed
+  createPage({
+    path: '/instagram',
+    component: path.resolve('./src/templates/instagram-template.js')
+  })
+
   // Posts and pages from markdown
   const result = await graphql(`
     {

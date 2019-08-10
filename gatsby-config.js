@@ -200,6 +200,13 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-flow'
+    'gatsby-plugin-flow',
+    'gatsby-image',
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `sarahjiyunlee__`
+      },
+  },
   ]
 };

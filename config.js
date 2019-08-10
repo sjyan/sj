@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       label: 'Sweet thangs',
-      path: '/sweet-thangs'
+      path: '/instagram'
     },
     {
       label: 'A look back',
