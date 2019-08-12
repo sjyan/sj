@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
+import Author from '../components/Sidebar/Author'
 import Instagram from '../components/Instagram';
 import { useSiteMetadata } from '../hooks';
 import type { MarkdownRemark } from '../types';
@@ -15,13 +16,12 @@ type Props = {
 */
 
 const InstagramTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const postTitle = "post title";
-  const metaDescription = "some instagram shit";
+  const { title: siteTitle, subtitle: siteSubtitle, author } = useSiteMetadata();
   const { edges } = data.allInstaNode;
 
   return (
-    <Layout title={postTitle} description={metaDescription}>
+    <Layout title={siteTitle} subtitle={siteSubtitle}>
+      <Author author={author}/>
       <Instagram edges={edges} />
     </Layout>
   );
@@ -41,7 +41,7 @@ export const query = graphql`
             caption
             localFile {
               childImageSharp {
-                fixed(width: 150, height: 150) {
+                fixed(width: 300, height: 300) {
                   ...GatsbyImageSharpFixed
                 }
               }

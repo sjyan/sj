@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.insta {
+  &__grid {
+    margin: 0 auto;
+    margin-top: 10rem;
+    max-width: 1000px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3rem;
+  }
+
+  &__post {
+    display: inline-block;
+  }
+
+  &__home-button {
+    display: block;
+    max-width: 90px;
+    height: $button-height;
+    padding: 0 24px;
+    line-height: $button-height;
+    text-align: center;
+    color: $color-base;
+    border: 1px solid $color-gray-border;
+    border-radius: $button-border-radius;
+    font-size: $typographic-base-font-size;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    @include margin-top(1);
+
+						          
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+}
+
+@include breakpoint-md {
+}
