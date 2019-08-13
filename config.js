@@ -13,6 +13,8 @@ module.exports = {
   instagramID: 'sarahjiyunlee__',
   tumblrID: 'sarahjlee',
   tumblrConsumerKey: '3tXLTsvfkcNh4ZnUxpLhKtT3J0CifpNAlVGx3E5H1nLAt5yY52',
+  tumblrNodeName: 'TumblrPost',
+  tumblrImagePath: 'photos[0].original_size.url',
   menu: [
     {
       label: 'About',

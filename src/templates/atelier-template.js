@@ -70,11 +70,13 @@ export const query = graphql`
           node {
             type
             post_url
-            photos {
-              original_size {
-                url
-              }
-            }
+            localImage {		
+	        childImageSharp {
+		    fluid(maxWidth: 400) {
+		        ...GatsbyImageSharpFluid
+		    }
+		}
+	    }
           }
         }
       }

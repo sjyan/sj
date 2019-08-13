@@ -3,6 +3,7 @@ import React from 'react';
 import { withPrefix, Link } from 'gatsby';
 import type { Edges } from '../../types';
 import styles from './Tumblr.module.scss';
+import Img from 'gatsby-image';
 
 // TODO: query gatsby lazy-loading using absolute paths from tumblr query
 
@@ -15,10 +16,10 @@ const Tumblr = ({ edges }: Props) => (
       <div className={styles['tumblr__grid']}>
         {
           edges.map((item, i) => (
-            (item.node.type == 'photo' && item.node.photos[0]) ? (
-              <div className={styles['tumblr__grid']} key={i}>
+            (item.node.type == 'photo' && item.node.localImage) ? (
+              <div className={styles['tumblr__post']} key={i}>
                 <a href={item.node.post_url}>
-                  <img src={item.node.photos[0].original_size.url} />
+                  <Img fluid = {item.node.localImage.childImageSharp.fluid} />
                 </a>
               </div>
             ) : (<div></div>)

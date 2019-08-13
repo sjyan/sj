@@ -15,7 +15,9 @@ module.exports = {
     author: siteConfig.author,
     instagramID: siteConfig.instagramID,
     tumblrID: siteConfig.tumblrID,
-    tumblrConsumerKey: siteConfig.tumblrConsumerKey
+    tumblrConsumerKey: siteConfig.tumblrConsumerKey,
+    tumblrNodeName: siteConfig.tumblrNodeName,
+    tumblrImagePath: siteConfig.tumblrImagePath
   },
   plugins: [
     {
@@ -215,8 +217,15 @@ module.exports = {
       resolve: `gatsby-source-tumblr`,
       options: {
         blogIdentifier: siteConfig.tumblrID,
-        consumerKey: siteConfig.tumblrConsumerKey,
+        consumerKey: siteConfig.tumblrConsumerKey
+      }
     },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: siteConfig.tumblrNodeName,
+        imagePath: siteConfig.tumblrImagePath
+      }
     }
   ]
 };
