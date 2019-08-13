@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.tumblr {
+  &__grid {
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 1000px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+
+  &__post {
+    display: inline-block;
+    max-width: 30%;
+  }
+}
+
+@include breakpoint-md {
+}

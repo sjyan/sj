@@ -16,7 +16,7 @@ module.exports = async (graphql, actions) => {
 
   const { postsPerPage } = siteConfig;
   const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / postsPerPage);
-  const feedSlug = '/feed';
+  const feedSlug = '/blog';
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({

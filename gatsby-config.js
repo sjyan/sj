@@ -12,7 +12,10 @@ module.exports = {
     copyright: siteConfig.copyright,
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
-    author: siteConfig.author
+    author: siteConfig.author,
+    instagramID: siteConfig.instagramID,
+    tumblrID: siteConfig.tumblrID,
+    tumblrConsumerKey: siteConfig.tumblrConsumerKey
   },
   plugins: [
     {
@@ -205,8 +208,15 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `sarahjiyunlee__`
+        username: siteConfig.instagramID
       },
-  },
+    },
+    {
+      resolve: `gatsby-source-tumblr`,
+      options: {
+        blogIdentifier: siteConfig.tumblrID,
+        consumerKey: siteConfig.tumblrConsumerKey,
+    },
+    }
   ]
 };

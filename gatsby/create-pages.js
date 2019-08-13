@@ -29,8 +29,8 @@ const createPages = async ({ graphql, actions }) => {
 
   // Instagram feed
   createPage({
-    path: '/instagram',
-    component: path.resolve('./src/templates/instagram-template.js')
+    path: '/atelier',
+    component: path.resolve('./src/templates/atelier-template.js')
   })
 
   // Posts and pages from markdown

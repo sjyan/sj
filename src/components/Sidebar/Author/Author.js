@@ -28,8 +28,7 @@ const Author = ({ author, isIndex }: Props) => (
 
     { isIndex ? (
       <h1 className={styles['author__title']}>
-        <Link className={styles['author__title-link']} to="/"><strong>S</strong>arah
-        <strong>J</strong>Lee</Link>
+        <Link className={styles['author__title-link']} to="/">{author.name}</Link>
         {/*
             Normally this is {author.name} from config
             TODO: add a way to wrap the config text content like '!J!ohn!D!oe' to do said styling
