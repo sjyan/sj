@@ -9,11 +9,12 @@ type Props = {
     bio: string,
     photo: string
   },
-  isIndex: ?boolean
+  isIndex: ?boolean,
+  isFixed: ?boolean
 };
 
-const Author = ({ author, isIndex }: Props) => (
-  <div className={styles['author']}>
+const Author = ({ author, isIndex, isFixed }: Props) => (
+  <div className={[styles['author'], (isFixed ? styles['author__fixed'] : '')].join(' ').trim()}>
     {/*
     <Link to="/">
       <img

@@ -19,13 +19,14 @@ type Props = {
 const AtelierTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, author } = useSiteMetadata();
   const { edges } = data.tumblr;
+  const isFixed = true;
   // TODO: incorporate tumblr and instagram on the same page or make a different template for instagram
   // TODO: styling for author header as same margins as on Layout pages
   // TODO: also make the author header fixed maybe
 
   return (
     <Layout title={siteTitle} subtitle={siteSubtitle}>
-      <Author author={author}/>
+      <Author author={author} isFixed={isFixed} />
       <Tumblr edges={edges} />
     </Layout>
   );
