@@ -13,9 +13,10 @@ module.exports = {
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,
     author: siteConfig.author,
-    instagramID: siteConfig.instagramID,
     tumblrID: siteConfig.tumblrID,
-    tumblrConsumerKey: siteConfig.tumblrConsumerKey
+    tumblrConsumerKey: siteConfig.tumblrConsumerKey,
+    goodReadsKey: siteConfig.goodReadsKey,
+    goodReadsUserId: siteConfig.goodReadsUserId
   },
   plugins: [
     {
@@ -216,7 +217,14 @@ module.exports = {
       options: {
         blogIdentifier: siteConfig.tumblrID,
         consumerKey: siteConfig.tumblrConsumerKey,
+      },
     },
+    {
+        resolve: "@jamesdanylik/gatsby-source-goodreads",
+        options: {
+            key: siteConfig.goodReadsKey,
+            id: siteConfig.goodReadsUserId
+        },
     }
   ]
 };

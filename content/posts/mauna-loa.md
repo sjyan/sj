@@ -1,14 +1,14 @@
 ---
-title: Example Blog Post
-date: "2019-08-11"
+title: Forecasting Mauna Loa Carbon Dioxide Emissions from Average Monthly Data
+date: "2016-04"
 template: "post"
 draft: false
-slug: "/posts/example-gratis/"
-category: "Example"
+slug: "/posts/mauna-loa/"
+category: "Statistics"
 tags:
-  - "Tag1"
-  - "Tag2"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  - "ITSMR"
+  - "Time Series Analysis"
+description: "Some down-to-earth description"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Dui ut ornare lectus sit amet. Enim diam vulputate ut pharetra. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Scelerisque in dictum non consectetur a. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Tempus imperdiet nulla malesuada pellentesque elit eget. Morbi tristique senectus et netus et. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Erat pellentesque adipiscing commodo elit at imperdiet. Quis ipsum suspendisse ultrices gravida dictum fusce. Amet consectetur adipiscing elit duis tristique sollicitudin.

@@ -12,6 +12,7 @@ type Props = {
 
 const Tumblr = ({ edges }: Props) => (
   <div>
+    { console.log("what them tumblr nodes look like", edges) }
       <div className={styles['tumblr__grid']}>
         {
           edges.map((item, i) => (

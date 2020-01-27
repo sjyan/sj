@@ -9,6 +9,7 @@ type Props = {
   edges: Edges
 };
 
+// todo: Narrow banner instead of read!
 const Feed = ({ edges }: Props) => (
   <div className={styles['feed']}>
     {edges.map((edge) => (
@@ -26,7 +27,8 @@ const Feed = ({ edges }: Props) => (
           <Link className={styles['feed__item-title-link']} to={edge.node.fields.slug}>{edge.node.frontmatter.title}</Link>
         </h2>
         <p className={styles['feed__item-description']}>{edge.node.frontmatter.description}</p>
-        <Link className={styles['feed__item-readmore']} to={edge.node.fields.slug}>Read</Link>
+        {/* Banner instead maybe */}
+        {/* <Link className={styles['feed__item-readmore']} to={edge.node.fields.slug}>Read</Link> */}
       </div>
     ))}
   </div>

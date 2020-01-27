@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = {
-  url: 'https://sarahjlee.studio',
+  url: 'https://stephenyan.com',
   pathPrefix: '/',
-  title: 'SJ',
-  subtitle: 'SarahJLee',
-  copyright: 'Copyright text goes here',
+  title: 'Stephen Yan',
+  subtitle: 'Stephen Yan',
+  copyright: '© Stephen Yan',
   disqusShortname: '',
   postsPerPage: 3,
   googleAnalyticsId: 'UA-73379983-2',
@@ -13,10 +13,20 @@ module.exports = {
   instagramID: 'sarahjiyunlee__',
   tumblrID: 'sarahjlee',
   tumblrConsumerKey: '3tXLTsvfkcNh4ZnUxpLhKtT3J0CifpNAlVGx3E5H1nLAt5yY52',
+  goodReadsKey: 'ceTWOxwRgsGDAMi9XGw6A',
+  goodReadsUserId: '94059538',
   menu: [
     {
       label: 'About',
       path: '/'
+    },
+    {
+      label: 'Reading',
+      path: '/reading'
+    },
+    {
+      label: 'Writing',
+      path: '/writing'
     },
     {
       label: 'Atelier',
@@ -28,15 +38,15 @@ module.exports = {
     }
       ],
   author: {
-    name: 'SarahJLee',
+    name: 'Stephen J Yan',
     photo: '', // '/photo.jpg'
-    bio: 'Biography text goes here',
+    bio: 'Sprezzatura',
     contacts: {
-      email: 'sarahjlee8@gmail.com',
-      instagram: 'sjleezy',
+      email: 'sjyan@outlook.com',
+      instagram: 'steviejyan',
       tumblr: 'sarahjlee',
-      twitter: 'sarahnuna',
-      github: 'sarahjlee93'
+      twitter: 'steviejyan',
+      github: 'sjyan'
     }
   }
 };

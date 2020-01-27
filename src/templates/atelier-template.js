@@ -2,7 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
-import Author from '../components/Sidebar/Author'
+import Author from '../components/Sidebar/Author';
+import Sidebar from '../components/Sidebar';
 import Instagram from '../components/Instagram';
 import Tumblr from '../components/Tumblr';
 import { useSiteMetadata } from '../hooks';
@@ -25,7 +26,7 @@ const AtelierTemplate = ({ data }) => {
 
   return (
     <Layout title={siteTitle} subtitle={siteSubtitle}>
-      <Author author={author}/>
+      <Sidebar />
       <Tumblr edges={edges} />
     </Layout>
   );

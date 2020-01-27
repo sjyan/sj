@@ -27,10 +27,16 @@ const createPages = async ({ graphql, actions }) => {
     component: path.resolve('./src/templates/categories-list-template.js')
   });
 
-  // Instagram feed
+  // Tubmlr feed
   createPage({
     path: '/atelier',
     component: path.resolve('./src/templates/atelier-template.js')
+  })
+
+  // GoodReads Page
+  createPage({
+    path: '/reading',
+    component: path.resolve('./src/templates/reading-template.js')
   })
 
   // Posts and pages from markdown
