@@ -9,6 +9,7 @@ module.exports = {
   disqusShortname: '',
   postsPerPage: 3,
   booksPerPage: 11,
+  readingListTitle: 'My GoodReads Reading List',
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   instagramID: 'sarahjiyunlee__',

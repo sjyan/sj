@@ -14,7 +14,7 @@ const GoodReads = ({ shelfEdges }: Props) => (
   <div className={styles['goodReads']}>
       {
         shelfEdges.map((shelf, i) => 
-            <a>{shelf.node.name}</a>
+          <Link to={shelf.node.name}><h2>{shelf.node.displayName}</h2></Link>
         )
       }
   </div>

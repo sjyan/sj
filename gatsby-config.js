@@ -206,7 +206,7 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-image',
-    {
+    {      
       resolve: `gatsby-source-instagram`,
       options: {
         username: siteConfig.instagramID
@@ -224,7 +224,7 @@ module.exports = {
         options: {
             key: siteConfig.goodReadsKey,
             id: siteConfig.goodReadsUserId
-        },
+        }
     }
   ]
 };

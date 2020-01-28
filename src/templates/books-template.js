@@ -9,14 +9,13 @@ import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, MarkdownRemark } from '../types';
+import { SHELVES } from '../constants';
 
 type Props = {
   pageContext: PageContext
 };
 
 const BooksTemplate = ({ data, pageContext }) => {
-  // transform goodreads data
-  console.log("page context", pageContext)
   const {
     id,
     name,
@@ -28,13 +27,9 @@ const BooksTemplate = ({ data, pageContext }) => {
     hasPrevPage,
     hasNextPage,
   } = pageContext;
-  const shelfNameMap =  {
-    "to-read": "Reading",
-    "currently-reading": "Currently Reading",
-    "read": "Read"
-  }
 
   const shelf = data.shelves.edges.find(shelf => shelf.node.id === id)
+  shelf.node.displayName = SHELVES[shelf.node.name]
   shelf.node.reviews
     .slice(booksOffset || 0, Math.min(booksLimit + booksOffset, shelf.node.reviews.length))
     .map((shelfReview, i) => {
@@ -46,35 +41,16 @@ const BooksTemplate = ({ data, pageContext }) => {
             .map(author => author.node.name).join(", ")
       shelfReview["book"] = bookInfo
     })
-  console.log("what happened shelf", shelf);
-
-  /*
-  data.shelves.edges.map(shelf => {
-    shelf.node.name = shelfNameMap[shelf.node.name]
-    shelf.node.reviews.map(shelfReview => {
-        const review = data.reviews.edges.find(review => review.node.id === shelfReview.id)
-        const bookInfo = data.books.edges.find(book => review.node.book.id === book.node.id)
-        bookInfo.node["authorNames"] = 
-          data.authors.edges
-            .filter(author => bookInfo.node.authors.some(bookAuthor => bookAuthor.id === author.node.id))
-              .map(author => author.node.name).join(", ")
-        shelfReview["book"] = bookInfo
-    })
-  })
-  */
 
   const { title: siteTitle, subtitle: siteSubtitle, author } = useSiteMetadata();
   const { edges: bookEdges } = data.books
   const { edges: authorEdges } = data.authors;
   const { edges: shelfEdges } = data.shelves;
-  // TODO: incorporate tumblr and instagram on the same page or make a different template for instagram
-  // TODO: styling for author header as same margins as on Layout pages
-  // TODO: also make the author header fixed maybe
 
   return (
     <Layout title={siteTitle} subtitle={siteSubtitle}>
       <Sidebar />
-      <Page title={shelfNameMap[shelf.node.name]}>
+      <Page title={shelf.node.displayName}>
         <ReadingList shelf={shelf} />
         <Pagination
           prevPagePath={prevPagePath}

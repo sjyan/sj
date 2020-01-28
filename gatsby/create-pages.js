@@ -2,6 +2,7 @@
 
 const path = require('path');
 const _ = require('lodash');
+const siteConfig = require('../config.js');
 const createCategoriesPages = require('./pagination/create-categories-pages.js');
 const createTagsPages = require('./pagination/create-tags-pages.js');
 const createPostsPages = require('./pagination/create-posts-pages.js');
@@ -9,6 +10,7 @@ const createBooksPages = require('./pagination/create-books-pages.js');
 
 const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  const { readingListTitle } = siteConfig
 
   // 404
   createPage({
@@ -37,7 +39,8 @@ const createPages = async ({ graphql, actions }) => {
   // GoodReads Page
   createPage({
     path: '/reading',
-    component: path.resolve('./src/templates/reading-template.js')
+    component: path.resolve('./src/templates/reading-template.js'),
+    context: { title: readingListTitle }
   })
 
   // Posts and pages from markdown
