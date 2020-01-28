@@ -8,6 +8,7 @@ module.exports = {
   copyright: '© Stephen Yan',
   disqusShortname: '',
   postsPerPage: 3,
+  booksPerPage: 11,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   instagramID: 'sarahjiyunlee__',

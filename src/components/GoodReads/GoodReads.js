@@ -10,27 +10,12 @@ type Props = {
   shelfEdges: Edges
 };
 
-const GoodReads = ({ bookEdges, authorEdges, shelfEdges }: Props) => (
-  <div>
-      { console.log("bookEdges", bookEdges)}
-      {/* shelf.node.name */}
-      {/* authorEdges.filter(item => item.node.authors.map(author => author.id).some(id => item.node.id)).split(', ') */}
+const GoodReads = ({ shelfEdges }: Props) => (
+  <div className={styles['goodReads']}>
       {
-        shelfEdges.map((shelf, key) => {
-          return (
-            <div>
-              <h3>{shelf.node.name}</h3>
-              { shelf.node.reviews.map(review => 
-                <div>
-                  <a href={review.book.node.link} target="__blank">{review.book.node.title}</a> 
-                  &nbsp;&mdash;&nbsp;
-                  {review.book.node.authorNames}
-                  {/* <div dangerouslySetInnerHTML={{ __html: review.book.node.description }} /> */}
-                </div>) 
-              }
-            </div>
-          )
-        })
+        shelfEdges.map((shelf, i) => 
+            <a>{shelf.node.name}</a>
+        )
       }
   </div>
 );

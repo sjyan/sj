@@ -5,6 +5,7 @@ const _ = require('lodash');
 const createCategoriesPages = require('./pagination/create-categories-pages.js');
 const createTagsPages = require('./pagination/create-tags-pages.js');
 const createPostsPages = require('./pagination/create-posts-pages.js');
+const createBooksPages = require('./pagination/create-books-pages.js');
 
 const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -59,7 +60,29 @@ const createPages = async ({ graphql, actions }) => {
     }
   `);
 
+  const shelvesResult = await graphql(`
+    {
+      allGoodreadsShelf {
+        edges {
+          node {
+            name,
+            id
+          }
+        }
+      }
+    }
+  `)
+
   const { edges } = result.data.allMarkdownRemark;
+  const shelves = shelvesResult.data.allGoodreadsShelf;
+
+  _.each(shelves.edges, (shelf) => {
+      createPage({
+        path: `/${shelf.node.name}`,
+        component: path.resolve('./src/templates/books-template.js'),
+        context: { name: shelf.node.name, id: shelf.node.id }
+      });
+  })
 
   _.each(edges, (edge) => {
     
@@ -68,7 +91,7 @@ const createPages = async ({ graphql, actions }) => {
       createPage({
         path: '/',
         component: path.resolve('./src/templates/page-template.js'),
-	context: { slug: edge.node.fields.slug }
+	      context: { slug: edge.node.fields.slug }
       });
     } else if (_.get(edge, 'node.frontmatter.template') === 'page') {
       createPage({
@@ -89,6 +112,7 @@ const createPages = async ({ graphql, actions }) => {
   await createTagsPages(graphql, actions);
   await createCategoriesPages(graphql, actions);
   await createPostsPages(graphql, actions);
+  await createBooksPages(graphql, actions);
 };
 
 
