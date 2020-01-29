@@ -19,7 +19,6 @@ const PostTemplate = ({ data }: Props) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      {/* <Document file={} onLoadSuccess={this.onDocumentLoadSucess}></Document> */}
       <Post post={data.markdownRemark} />
     </Layout>
   );

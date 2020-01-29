@@ -1,0 +1,10 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.attachment {
+	&__pdf {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -9,7 +9,9 @@ type Props = {
   prevPagePath: string,
   nextPagePath: string,
   hasNextPage: boolean,
-  hasPrevPage: boolean
+  hasPrevPage: boolean,
+  previousAction: function,
+  nextAction: function
 };
 
 const cx = classNames.bind(styles);
@@ -18,7 +20,9 @@ const Pagination = ({
   prevPagePath,
   nextPagePath,
   hasNextPage,
-  hasPrevPage
+  hasPrevPage,
+  previousAction,
+  nextAction
 }: Props) => {
   const prevClassName = cx({
     'pagination__prev-link': true,
@@ -36,7 +40,8 @@ const Pagination = ({
         <Link rel="prev" to={hasPrevPage ? prevPagePath : '/'} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>
       </div>
       <div className={styles['pagination__next']}>
-        <Link rel="next" to={hasNextPage ? nextPagePath : '/'} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link>
+        <a onClick={nextAction}>{PAGINATION.NEXT_PAGE}</a>
+        {/* <Link rel="next" onClick={nextAction} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link> */}
       </div>
     </div>
   );
