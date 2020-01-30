@@ -14,10 +14,15 @@ type Props = {
   post: Node
 };
 
+const path = require('path');
+
 const Post = ({ post }: Props) => {
-  const { html } = post;
+  const { html, fileAbsolutePath } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date } = post.frontmatter;
+  console.log('whats path', path)
+  const filename = path.basename(fileAbsolutePath);
+  console.log('file name parsed', filename);
 
   return (
     <div className={styles['post']}>

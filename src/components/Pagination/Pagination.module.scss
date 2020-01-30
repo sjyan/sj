@@ -17,6 +17,7 @@
       &:hover,
       &:focus {
         color: $color-primary;
+        cursor: pointer;
       }
 
       &--disable {
@@ -26,6 +27,11 @@
 
     }
 
+  }
+
+  &__state {
+    width: 50%;
+    text-align: center;
   }
 
   &__next {
@@ -40,6 +46,7 @@
       &:hover,
       &:focus {
         color: $color-primary;
+        cursor: pointer;
       }
 
       &--disable {

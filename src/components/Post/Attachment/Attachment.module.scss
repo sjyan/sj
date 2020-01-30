@@ -2,6 +2,12 @@
 @import '../../../assets/scss/mixins';
 
 .attachment {
+	border-top: 1px solid $color-gray-border;
+	padding-top: 20px;
+	@include line-height(1);
+	@include margin-top(1);
+	@include margin-bottom(2);
+
 	&__pdf {
 		display: flex;
 		align-items: center;

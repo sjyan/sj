@@ -11,7 +11,8 @@ type Props = {
   hasNextPage: boolean,
   hasPrevPage: boolean,
   previousAction: function,
-  nextAction: function
+  nextAction: function,
+  pageState: object
 };
 
 const cx = classNames.bind(styles);
@@ -21,8 +22,9 @@ const Pagination = ({
   nextPagePath,
   hasNextPage,
   hasPrevPage,
-  previousAction,
-  nextAction
+  prevAction,
+  nextAction,
+  pageState
 }: Props) => {
   const prevClassName = cx({
     'pagination__prev-link': true,
@@ -37,11 +39,19 @@ const Pagination = ({
   return (
     <div className={styles['pagination']}>
       <div className={styles['pagination__prev']}>
-        <Link rel="prev" to={hasPrevPage ? prevPagePath : '/'} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>
+        { prevAction && prevAction instanceof Function ? 
+          (<a rel="prev" className={prevClassName} onClick={prevAction}>{PAGINATION.PREV_PAGE}</a>) : 
+          (<Link rel="prev" to={hasPrevPage ? prevPagePath : '/'} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>)
+        }
+      </div>
+      <div className={styles['pagination__state']}>
+        { pageState ? (<p>Page {pageState.pageNumber} of {pageState.numPages}</p>) : null }
       </div>
       <div className={styles['pagination__next']}>
-        <a onClick={nextAction}>{PAGINATION.NEXT_PAGE}</a>
-        {/* <Link rel="next" onClick={nextAction} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link> */}
+        { nextAction && nextAction instanceof Function ? 
+          (<a rel="next" className={nextClassName} onClick={nextAction}>{PAGINATION.NEXT_PAGE}</a>) : 
+          (<Link rel="next" to={hasNextPage ? nextPagePath : '/'} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link>)
+        }
       </div>
     </div>
   );
