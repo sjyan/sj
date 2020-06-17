@@ -20,16 +20,14 @@ const Post = ({ post }: Props) => {
   const { html, fileAbsolutePath } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date } = post.frontmatter;
-  console.log('whats path', path)
-  const filename = path.basename(fileAbsolutePath);
-  console.log('file name parsed', filename);
+  const filename = path.basename(fileAbsolutePath, '.md');
 
   return (
     <div className={styles['post']}>
       <Link className={styles['post__home-button']} to="/writing">Writing</Link>
 
       <div className={styles['post__content']}>
-        <Content body={html} title={title} />
+        <Content body={html} title={title} file={filename} />
       </div>
 
       <div className={styles['post__footer']}>

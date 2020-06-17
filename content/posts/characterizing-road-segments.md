@@ -3,7 +3,7 @@ title: Charactering Road Segments using Compass Sensors to Predict Approaching B
 date: "2017-03"
 template: "post"
 draft: false
-slug: "/posts/mauna-loa/"
+slug: "/posts/characterizing-road-segments/"
 category: "Mobile Computing"
 tags:
   - "Sensors"

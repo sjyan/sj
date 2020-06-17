@@ -2,20 +2,22 @@
 import React from 'react';
 import Attachment from '../Attachment'
 import styles from './Content.module.scss';
+import { useSiteMetadata } from '../../../hooks';
 
 type Props = {
   body: string,
-  title: string
+  title: string,
+  file: string
 };
 
-const pdfPath = "https://stephenyan.com/song-popularity-display.pdf";
-const Content = ({ body, title }: Props) => (
-  <div className={styles['content']}>
-  	{ console.log('the pdfs', pdfs)}
-    <h1 className={styles['content__title']}>{title}</h1>
-    <div className={styles['content__body']} dangerouslySetInnerHTML={{ __html: body }} />
-    <Attachment />
-  </div>
-);
+const Content = ({ body, title, file }: Props) => {
+  const { awsBucketBase } = useSiteMetadata();
+  return (
+    <div className={styles['content']}>
+      <h1 className={styles['content__title']}>{title}</h1>
+      <div className={styles['content__body']} dangerouslySetInnerHTML={{ __html: body }} />
+      <Attachment file={`${awsBucketBase}/${file}.pdf`} />
+    </div>
+)};
 
 export default Content;

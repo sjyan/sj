@@ -31,7 +31,7 @@ class Attachment extends Component {
     this.changePage = this.changePage.bind(this);
   }
 
-  documentWidth = 1000;
+  documentHeight = 1200;
 
   state = {
     numPages: null,
@@ -63,6 +63,10 @@ class Attachment extends Component {
   hasNextPage = () => this.state.pageNumber < this.state.numPages;
   hasPrevPage = () => this.state.pageNumber > 1;
 
+  loading = () => (
+    <div style={{height: this.documentHeight}}>Loading...</div>
+  )
+
   render() {
     const { numPages, pageNumber } = this.state;
     console.log('this.hasPrevPage', this.hasPrevPage());
@@ -74,13 +78,13 @@ class Attachment extends Component {
             hasNextPage={this.hasNextPage()}
             prevAction={this.previousPage}
             nextAction={this.nextPage}
-            pageState={this.state}
+            pageState={this.state}  
           />
           { console.log('whats the file path', this.path) }
           <Document file={this.path} onLoadSuccess={this.onDocumentLoadSuccess} className={styles['attachment__pdf']}>
-            <Page pageNumber={pageNumber} width={this.documentWidth} />
+            <Page pageNumber={pageNumber} height={this.documentHeight} loading={this.loading} />
           </Document>
-        <Pagination
+          <Pagination
             hasPrevPage={this.hasPrevPage()}
             hasNextPage={this.hasNextPage()}
             prevAction={this.previousPage}

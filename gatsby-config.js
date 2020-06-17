@@ -16,7 +16,8 @@ module.exports = {
     tumblrID: siteConfig.tumblrID,
     tumblrConsumerKey: siteConfig.tumblrConsumerKey,
     goodReadsKey: siteConfig.goodReadsKey,
-    goodReadsUserId: siteConfig.goodReadsUserId
+    goodReadsUserId: siteConfig.goodReadsUserId,
+    awsBucketBase: siteConfig.awsBucketBase
   },
   plugins: [
     {

@@ -18,6 +18,7 @@ module.exports = {
   tumblrConsumerKey: '3tXLTsvfkcNh4ZnUxpLhKtT3J0CifpNAlVGx3E5H1nLAt5yY52',
   goodReadsKey: 'ceTWOxwRgsGDAMi9XGw6A',
   goodReadsUserId: '94059538',
+  awsBucketBase: 'https://aws-website-stephenyan-1e36c.s3.amazonaws.com/pdf',
   menu: [
     {
       label: 'About',
