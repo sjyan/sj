@@ -70,7 +70,7 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-source-instagram": "^0.6.1",
     "gatsby-source-tumblr": "^0.1.2",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.13",
     "invariant": "^2.2.4",
     "katex": "^0.11.1",
